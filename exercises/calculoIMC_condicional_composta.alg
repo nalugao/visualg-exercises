@@ -26,8 +26,7 @@ inicio
                   se (IMC >= 35) e (IMC < 40) entao
                      escreva ("Obesidade severa")
                   senao
-                     se (IMC >= 40) e (IMC < 45) entao
-                        escreva ("Obesidade mórbida")
+                      escreva ("Obesidade mórbida")
                      fimse
                   fimse
                fimse

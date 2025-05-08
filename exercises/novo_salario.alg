@@ -11,7 +11,7 @@ inicio
       escreva ("quantidade de dependentes: ")
       leia (dependentes)
       //o novo salário vai ser dado de acordo com o numero de dependentes
-      escolha dependentes
+      Escolha dependentes
               caso 0
                    novoSalario <- salario + (salario*5/100)
               caso 1, 2, 3

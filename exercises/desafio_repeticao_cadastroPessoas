@@ -1,13 +1,13 @@
-algoritmo "seletorPessoas"
+algoritmo "cadastroPessoas"
 var
-   I, C, F, M: Inteiro
-   G, R, ContM, ContF: Caractere
+   G, R: Caractere
+   I, C, ContM, ContF: Inteiro
 inicio
    //Desafio: Quantos homens com mais de 18 anos, com cabelos Castanhos, e
    //mulheres entre 25 e 30 anos, loiras foram cadastrados.
+   ContM <- 0
+   ContF <- 0
    Repita
-      C <- 1
-      G <- 0
       Escreval ("======================")
       Escreval ("  SELETOR DE PESSOAS")
       Escreval ("======================")
@@ -22,29 +22,22 @@ inicio
       Escreval ("[4] Ruivo")
       Escreva ("Resposta: ")
       Leia (C)
-      Escolha (C)
-              caso 1
-              valor <- "preto"
-              caso 2
-              valor <-
+      
+      Se ((G="M") ou (G="m")) e (I>18) e (C=2) entao
+      ContM <- ContM+1
+      FimSe
+      
+      Se ((G="F") ou (G="f")) e (I>=25) e (I<=30) e (C=3) entao
+      ContF <- ContF+1
+      FimSe
+      
       Escreva ("Quer cadastrar mais pessoas? [S/N] ")
       Leia (R)
       LimpaTela
-   Ate (R = "N")
+   Ate (R="N") ou (R="n")
    Escreval ("======================")
    Escreval ("    RESULTADO FINAL   ")
    Escreval ("======================")
-   Se (G="M") e (I>18) e  entao
-      Escreval ("Total de homens com mais de 18 e cabelos castanho: ", xxx)
-      G <- F+1
-   senao
-      se (F) e (I>=25) e (I<=30) entao
-         Escreval ("Total de mulheres entre 25 e 30 e cabelos loiros: ", yyy)
-      FimSe
-   FimSe
-   //Escreval ("======================")
-   //Escreval ("    RESULTADO FINAL   ")
-   //Escreval ("======================")
-   //Escreval ("Total de homens com mais de 18 e cabelos castanho: ", xxx)
-   //Escreval ("Total de mulheres entre 25 e 30 e cabelos loiros: ", yyy)
+   Escreval ("Total de homens com mais de 18 e cabelos castanho: ", ContM)
+   Escreval ("Total de mulheres entre 25 e 30 e cabelos loiros: ", ContF)
 fimalgoritmo
